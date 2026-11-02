@@ -7,25 +7,25 @@
 
 ## 🎯 Executive Overview & Purpose
 
-Repositori ini berfungsi sebagai instrumen **Proof of Work (PoW)** dan dokumentasi terstruktur dari proses akselerasi kapabilitas analitik end-to-end melalui *Data Analyst Bootcamp*. 
+This repository serves as a **Proof of Work (PoW)** instrument and a structured documentation framework for an intensive acceleration of end-to-end analytical capabilities through an exhaustive *Data Analyst Bootcamp*.
 
-Sebagai mahasiswa Informatika semester 5 dengan spesialisasi Sains Data, tujuan utama repositori ini adalah:
-1. **Menjembatani Rigor Akademis & Standar Industri:** Mentransformasikan fondasi teoritis (aljabar linier, kalkulus, struktur data, dan probabilitas/statistika) ke dalam metodologi industri seperti *financial modeling*, *method-chained data transformation*, dan *dimensional modeling*.
-2. **Reproducibility & Code Hygiene:** Menjaga standar rekayasa perangkat lunak (version control, clean query formatting, modularisasi Python, serta penanganan data defensif) dalam setiap analisis data.
-3. **Persiapan Portofolio Magang (Quant Finance & Data Analytics):** Membangun portofolio berbasis proyek nyata yang menunjukkan pemikiran analitis berbasis hipotesis (*hypothesis-driven analytics*), efisiensi komputasi, dan pemahaman dinamika pasar keuangan.
+As a 5th-semester Computer Science undergraduate specializing in Data Science, this repository is architected around three foundational pillars:
+1. **Bridging Academic Rigor & Industry Standards:** Translating core theoretical foundations (linear algebra, calculus, data structures, probability, and mathematical statistics) into production-grade industry workflows, including *financial sensitivity modeling*, *method-chained data transformations*, and *dimensional data modeling*.
+2. **Reproducibility & Engineering Hygiene:** Upholding software engineering best practices (version control, clean query formatting, modular Python pipelines, and defensive data processing) across every analytical layer.
+3. **Internship Portfolio Positioning (Quant Finance & High-Impact Analytics):** Cultivating a project-backed portfolio demonstrating hypothesis-driven analytical thinking, computational efficiency, and deep financial market intuition.
 
 ---
 
 ## 🛠️ Technology Stack & Tooling
 
-| Domain | Tool / Framework | Penggunaan Spesifik & Pendekatan |
+| Domain | Tool / Framework | Specific Use Case & Analytical Approach |
 | :--- | :--- | :--- |
-| **Relational Database** | PostgreSQL, DuckDB, SQLite | Advanced Window Functions, CTEs, Query Execution Plans (`EXPLAIN ANALYZE`), Indexing Strategy. |
-| **Financial Modeling** | Microsoft Excel / Modern Spreadsheet | Dynamic Arrays, `XLOOKUP`, `INDEX/MATCH`, Two-way Data Tables, Scenario Manager, Power Query (M Language). |
+| **Relational Database** | PostgreSQL, DuckDB, SQLite | Advanced Window Functions, CTEs, Query Execution Plans (`EXPLAIN ANALYZE`), Indexing Strategies (B-Tree, BRIN). |
+| **Financial Modeling** | Microsoft Excel / Modern Spreadsheets | Dynamic Arrays, `XLOOKUP`, `INDEX/MATCH`, Two-Way Data Tables, Scenario Manager, Power Query (M Language ETL). |
 | **Business Intelligence** | Microsoft Power BI, DAX | Dimensional Modeling (Kimball Star Schema), Time-Intelligence Measures, Context Transition (`CALCULATE`, `SUMX`). |
-| **Data Engineering & Analysis** | Python (Pandas, NumPy, SciPy) | **Functional Data Processing & Method Chaining** (`.pipe()`, `.assign()`), Vectorized Computation, Time Series Analysis. |
-| **Visualization** | Seaborn, Matplotlib, Plotly | Distribution plots, Correlation Heatmaps, Financial Drawdown Charts, Interactive Timeseries. |
-| **Development Workflow** | Antigravity IDE, Git/GitHub, PowerShell | Modular directory design, strict `.gitignore` rules, and reproducible environment management. |
+| **Data Engineering & Analysis** | Python (Pandas, NumPy, SciPy) | **Functional Data Processing & Method Chaining** (`.pipe()`, `.assign()`), Vectorized Computations, Financial Time-Series Analysis. |
+| **Visualization** | Seaborn, Matplotlib, Plotly | Distribution Analysis, Correlation Matrices, Financial Drawdown Charts, Interactive Time-Series Displays. |
+| **Development Workflow** | Antigravity IDE, Git/GitHub, PowerShell | Modular directory architecture, strict `.gitignore` safeguards, and reproducible environment management. |
 
 ---
 
@@ -33,54 +33,56 @@ Sebagai mahasiswa Informatika semester 5 dengan spesialisasi Sains Data, tujuan 
 
 ```text
 data-analytics-bootcamp-log/
-├── .gitignore                      # Proteksi dataset mentah, virtualenv, dan binary files
-├── README.md                       # Dokumentasi utama dan master logbook
-├── 01_SQL/                         # Analisis kueri relasional & optimasi
-│   ├── README.md                   # Spesifikasi kurikulum dan standar kueri SQL
-│   ├── queries/                    # Latihan konsep atomik (CTEs, Windowing, Aggregation)
-│   └── case_studies/               # Analisis transaksi keuangan dan kohort
-├── 02_Excel/                       # Pemodelan keuangan & otomasi spreadsheet
-│   ├── README.md                   # Fokus pemodelan dinamis & analisis sensitivitas
-│   ├── models/                     # Template DCF, scenario model, & simulasi Monte Carlo
-│   └── templates/                  # Lembar kerja kalkulasi finansial
-├── 03_PowerBI/                     # Visualisasi interaktif & pemodelan semantik
-│   ├── README.md                   # Prinsip Star Schema dan optimasi DAX
-│   ├── pbix_models/                # File laporan Power BI (.pbix / .pbip)
-│   └── dax_snippets/               # Formula DAX reusable (KPI, MoM, YoY, Run Rates)
-├── 04_Python/                      # Analisis fungsional & komputasi saintifik
-│   ├── README.md                   # Metodologi Pandas Method Chaining & Time Series
-│   ├── notebooks/                  # Jupyter notebooks untuk EDA dan eksperimentasi
-│   └── src/                        # Modul Python modular (.py) dan fungsi reusable
-└── 05_CapstoneProject/             # Proyek komprehensif end-to-end
-    ├── README.md                   # Executive brief, metodologi, dan temuan bisnis
-    ├── data/                       # Penyimpanan lokal data (diabaikan oleh git)
-    ├── notebooks/                  # Notebook analitik dan pemodelan
-    ├── src/                        # Pipeline ETL dan kalkulasi metrik
-    └── reports/                    # Ringkasan eksekutif, presentasi PDF, dan visual utama
+├── .gitignore                      # Safeguards raw data, virtual environments, and binary files
+├── README.md                       # Master documentation and executive daily logbook
+├── 01_SQL/                         # Relational query analysis & performance optimization
+│   ├── README.md                   # Module specifications and SQL style guidelines
+│   ├── queries/                    # Atomic concept drills (CTEs, Windowing, Aggregations)
+│   └── case_studies/               # Transactional analytics and cohort retention studies
+├── 02_Excel/                       # Financial modeling & spreadsheet automation
+│   ├── README.md                   # Dynamic modeling focus & sensitivity analysis
+│   ├── models/                     # DCF valuation models, scenario managers, & simulations
+│   └── templates/                  # Standardized financial calculation worksheets
+├── 03_PowerBI/                     # Interactive visualization & semantic data modeling
+│   ├── README.md                   # Kimball Star Schema principles and DAX optimization
+│   ├── pbix_models/                # Power BI project files (.pbip / .pbix metadata)
+│   └── dax_snippets/               # Modular DAX measures (KPIs, MoM, YoY, Run Rates)
+├── 04_Python/                      # Functional data analysis & scientific computing
+│   ├── README.md                   # Pandas Method Chaining standards & Time-Series metrics
+│   ├── notebooks/                  # Jupyter notebooks for exploratory data analysis (EDA)
+│   └── src/                        # Modular, production-ready Python modules (.py)
+└── 05_CapstoneProject/             # Comprehensive end-to-end analytical project
+    ├── README.md                   # Executive brief, methodology, and key business findings
+    ├── data/                       # Local data storage (raw and processed, git-ignored)
+    │   ├── raw/
+    │   └── processed/
+    ├── notebooks/                  # Analytical, modeling, and feature engineering notebooks
+    ├── src/                        # Automated ETL pipelines and quantitative calculation engines
+    └── reports/                    # Executive summaries, slide decks, and visual assets
 ```
 
 ---
 
-## 📖 Daily Learning Logbook (Jurnal Pembelajaran Terstruktur)
+## 📖 Daily Learning Logbook
 
-Tabel di bawah ini merekam proses *Learning in Public* secara konsisten, mencakup tantangan teknis yang dihadapi serta solusi mitigasinya.
+This logbook records the continuous *Learning in Public* trajectory, highlighting key technical concepts mastered as well as encountered roadblocks and their engineered solutions.
 
-| Tanggal | Modul / Fokus Topik | Konsep Kunci yang Dikuasai | Tantangan / Error Ditemui & Solusi Implementasi |
+| Date | Module / Topic Focus | Key Concepts Mastered | Technical Challenges Encountered & Implemented Solutions |
 | :---: | :--- | :--- | :--- |
-| `2026-11-02` | **01_SQL** - Advanced Window Functions | `DENSE_RANK()`, `LEAD()`, `LAG()`, Frame Clauses (`ROWS BETWEEN PRECEDING AND CURRENT ROW`) | **Tantangan:** Perhitungan moving average 30-hari menghasilkan hasil bias pada hari libur bursa.<br>**Solusi:** Mengubah window frame dari `ROWS` fisik ke `RANGE BETWEEN INTERVAL '30 DAYS' PRECEDING`. |
-| `2026-11-03` | **04_Python** - Functional Pandas | Method Chaining menggunakan `.assign()`, `.pipe()`, dan operasi vektorisasi tanpa `apply()` | **Tantangan:** Mutasi *in-place* menyebabkan side-effects saat menghitung log return aset portofolio.<br>**Solusi:** Membangun pipeline murni fungsional (`df.pipe(clean_data).pipe(calculate_returns)`) dengan immutability pattern. |
-| `2026-11-04` | **02_Excel** - Financial Sensitivity Analysis | Two-Way Data Tables, Dynamic Array Formulas (`FILTER`, `SORT`, `UNIQUE`), Scenario Manager | **Tantangan:** Data Table berukuran besar memperlambat kalkulasi workbook secara signifikan.<br>**Solusi:** Mengubah *Calculation Options* menjadi *Automatic except for Data Tables* dan mengoptimalkan formula referensi array. |
-| `2026-11-05` | **03_PowerBI** - DAX Context Transition | Row Context vs Filter Context, Evaluasi `CALCULATE()`, Time Intelligence (`DATEADD`, `SAMEPERIODLASTYEAR`) | **Tantangan:** Filter context tertimpa secara tidak sengaja ketika menghitung Cumulative Asset Value.<br>**Solusi:** Memanfaatkan `KEEPFILTERS()` di dalam argumen filter `CALCULATE()` untuk mempertahankan konteks filter dimensional. |
-| *YYYY-MM-DD* | *[Modul - Topik]* | *[Tuliskan 2-3 konsep teknis utama]* | *[Deskripsikan akar masalah dan perbaikan teknis]* |
+| `2026-11-02` | **01_SQL** - Advanced Window Functions | `DENSE_RANK()`, `LEAD()`, `LAG()`, Frame Clauses (`ROWS BETWEEN PRECEDING AND CURRENT ROW`) | **Roadblock:** A 30-day moving average calculation produced biased results over trading holidays and weekends.<br>**Solution:** Migrated the window frame definition from physical `ROWS` to dynamic `RANGE BETWEEN INTERVAL '30 DAYS' PRECEDING`. |
+| `2026-11-03` | **04_Python** - Functional Pandas | Method Chaining utilizing `.assign()`, `.pipe()`, and vectorized operations avoiding iterative loops | **Roadblock:** In-place mutations caused unintended state side-effects when computing portfolio asset log returns.<br>**Solution:** Architected a purely functional transformation pipeline (`df.pipe(clean_data).pipe(calculate_returns)`) enforcing immutability. |
+| `2026-11-04` | **02_Excel** - Financial Sensitivity Analysis | Two-Way Data Tables, Dynamic Array Formulas (`FILTER`, `SORT`, `UNIQUE`), Scenario Manager | **Roadblock:** Large multi-dimensional Data Tables significantly degraded workbook recalculation performance.<br>**Solution:** Configured Excel *Calculation Options* to *Automatic except for Data Tables* and optimized dynamic array reference ranges. |
+| `2026-11-05` | **03_PowerBI** - DAX Context Transition | Row Context vs Filter Context, `CALCULATE()` Evaluation, Time Intelligence (`DATEADD`, `SAMEPERIODLASTYEAR`) | **Roadblock:** Existing dimensional filter contexts were inadvertently overwritten during Cumulative Asset Value calculations.<br>**Solution:** Deployed `KEEPFILTERS()` within `CALCULATE()` filter arguments to preserve incoming dimensional context. |
+| *YYYY-MM-DD* | *[Module - Topic]* | *[Summarize 2-3 core technical concepts]* | *[Describe the root cause and implemented technical fix]* |
 
 ---
 
-## 🔬 Core Competencies & Methodology
+## 🔬 Core Competencies & Analytical Methodology
 
-### 1. Functional Data Pipeline (Python & Pandas)
-Dalam analisis kuantitatif, kode imperatif yang mengandalkan iterasi `for-loop` atau mutasi state tidak efisien dan rentan bug. Repositori ini menerapkan paradigma fungsional:
+### 1. Functional Data Pipelines (Python & Pandas)
+In quantitative analytics, imperative code that relies on mutable states or iterative `for-loops` introduces latency and regression risks. This repository enforces a declarative, functional methodology:
 ```python
-# Standar implementasi Method Chaining pada repositori ini:
+# Standard Method Chaining implementation adopted in this repository:
 clean_equity_df = (
     raw_df
     .rename(columns=str.lower)
@@ -96,34 +98,34 @@ clean_equity_df = (
 ```
 
 ### 2. Analytical SQL & Data Engineering
-Fokus kueri tidak hanya berhenti pada `SELECT-FROM-WHERE`, melainkan:
-- Pemodelan analitik data warehouse (Fact & Dimension Tables).
-- Penggunaan recursive CTEs untuk hierarchical data.
-- Analisis execution plan menggunakan indexing B-Tree vs Hash index untuk kueri volumetrik tinggi.
+Query construction extends beyond standard querying into production-grade data modeling:
+- Analytical Data Warehouse schema design (Fact and Dimension table segregation).
+- Recursive CTEs for hierarchical structures and trading calendar synthesis.
+- Execution plan inspection (`EXPLAIN ANALYZE`) comparing B-Tree vs. BRIN indexing across high-volume time-series datasets.
 
 ### 3. Business Intelligence & Decision-Grade Dashboards
-- Arsitektur model data 100% Star Schema (menghindari flattened single-table anti-patterns).
-- Pembuatan ukuran DAX terukur (*explicit measures*) dengan dokumentasi logika bisnis yang jelas.
+- Strict adherence to 100% Kimball Star Schema architectures (eliminating flattened, single-table anti-patterns).
+- Development of explicit, documented DAX measures reflecting nuanced financial business logic.
 
 ---
 
 ## 🚀 Setup & Reproducibility
 
-Untuk mereplikasi lingkungan analisis pada mesin lokal Anda:
+To replicate the analytical environment on your local workstation:
 
 ```bash
-# 1. Clone repositori
+# 1. Clone the repository
 git clone https://github.com/Ismaildwi24/data-analytics-bootcamp-log.git
 cd data-analytics-bootcamp-log
 
-# 2. Buat dan aktifkan virtual environment (Python)
+# 2. Initialize and activate Python virtual environment
 python -m venv .venv
 # Windows (PowerShell):
 .venv\Scripts\Activate.ps1
 # Unix / macOS:
 source .venv/bin/activate
 
-# 3. Pasang dependensi analisis data
+# 3. Install core analytical dependencies
 pip install --upgrade pip
 pip install pandas numpy scipy matplotlib seaborn plotly jupyter duckdb
 ```
@@ -131,7 +133,5 @@ pip install pandas numpy scipy matplotlib seaborn plotly jupyter duckdb
 ---
 
 ## 📬 Contact & Portfolio Links
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com)
 - **GitHub:** [github.com/Ismaildwi24](https://github.com/Ismaildwi24)
 - **Email:** ismaildwimuh.anugerah@gmail.com
-

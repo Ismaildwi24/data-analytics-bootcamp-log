@@ -1,37 +1,36 @@
-# 📈 Modul 02: Advanced Excel & Financial Modeling
+# 📈 Module 02: Advanced Excel & Financial Modeling
 
-Modul ini mendokumentasikan penguasaan **Spreadsheet Modern** tingkat lanjut yang difokuskan pada analisis skenario bisnis, pemodelan keuangan (*financial modeling*), dan otomasi pembersihan data menggunakan Power Query.
+This module captures advanced mastery of **Modern Spreadsheets**, focused on institutional business scenario analysis, financial valuation modeling (*Discounted Cash Flow / DCF*), and automated, reproducible data cleansing using Power Query.
 
 ---
 
-## 🎯 Fokus Kompetensi & Target Pembelajaran
+## 🎯 Competency Focus & Learning Objectives
 
 1. **Modern Lookup & Dynamic Array Formulas:**
-   - Transisi dari formula legacy ke formula array dinamis: `XLOOKUP`, `INDEX/MATCH`, `FILTER`, `UNIQUE`, `SORT`, `CHOOSECOLS`.
-   - Optimasi efisiensi formula menggunakan fungsi modular `LET()` dan pembuatan custom function menggunakan `LAMBDA()`.
+   - Transitioning from legacy formulas to dynamic arrays: `XLOOKUP`, `INDEX/MATCH`, `FILTER`, `UNIQUE`, `SORT`, `CHOOSECOLS`.
+   - Formula modularization using `LET()` for sub-expression caching and custom formula authoring via `LAMBDA()`.
 2. **Financial Modeling & Decision Support:**
-   - Pemodelan Arus Kas Terdiskon (*Discounted Cash Flow / DCF Model*).
-   - Analisis Sensitivitas (*Sensitivity Analysis*): One-Way dan Two-Way Data Tables untuk memproyeksikan perubahan valuasi terhadap suku bunga (*WACC*) dan tingkat pertumbuhan (*Terminal Growth*).
-   - *Scenario Manager* dan *Goal Seek* untuk stress testing skenario dasar, optimis, dan pesimis.
+   - Three-statement integration and Discounted Cash Flow (DCF) valuation engines.
+   - Sensitivity Analysis: One-Way and Two-Way Data Tables to evaluate company valuation responsiveness against varying discount rates (*WACC*) and terminal growth rates.
+   - Scenario Manager and Goal Seek for deterministic stress testing across base, bull, and bear market cases.
 3. **Reproducible ETL via Power Query (M Language):**
-   - Impor data otomatis dari berbagai sumber (*multi-source ingestion*).
-   - Transformasi unpivot, merging, dan appending data tanpa sentuhan manual (reproducible workflow).
+   - Multi-source automated data ingestion.
+   - Unpivoting, merging, and appending datasets into clean, normalized tabular schemas without manual intervention.
 
 ---
 
-## 📂 Struktur Modul
+## 📂 Module Architecture
 
 ```text
 02_Excel/
-├── README.md                   # Dokumen panduan modul (file ini)
-├── models/                     # Model analitik dan keuangan
-│   ├── financial_sensitivity_model.xlsx.md  # Dokumentasi parameter & output model
+├── README.md                   # Module documentation (this file)
+├── models/                     # Analytical and financial valuation models
+│   ├── financial_sensitivity_model.xlsx.md  # Documentation of assumptions & outputs
 │   └── dcf_valuation_engine.xlsx.md
-└── templates/                  # Template lembar kerja terstandardisasi
+└── templates/                  # Standardized, reusable calculation templates
     ├── kpi_variance_analysis_template.xlsx.md
     └── data_cleansing_powerquery.m
 ```
 
-> **Catatan Pengelolaan File:**  
-> File `.xlsx` mentah berukuran besar tidak dimasukkan ke dalam commit Git (lihat `.gitignore`). Setiap model dilengkapi dengan file dokumentasi markdown (`.xlsx.md`) yang menjelaskan asumsi, arsitektur lembar kerja, dan ringkasan visual hasil analisis.
-
+> **Data File Management Note:**  
+> Large binary `.xlsx` files are excluded from Git commits via `.gitignore`. Each model is paired with a corresponding markdown specification file (`.xlsx.md`) documenting input assumptions, model architecture, and visual output summaries.

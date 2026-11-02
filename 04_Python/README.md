@@ -1,49 +1,49 @@
-# 🐍 Modul 04: Functional Python & Quantitative Data Processing
+# 🐍 Module 04: Functional Python & Quantitative Data Processing
 
-Modul ini berfokus pada **rekayasa data analitik modern dengan Python**, dengan penekanan khusus pada paradigma fungsional, manipulasi data berbasis *method chaining* menggunakan **Pandas**, komputasi numerik dengan **NumPy & SciPy**, serta analisis deret waktu (*time series analysis*).
+This module centers on **modern analytical data engineering using Python**, with primary focus on functional programming paradigms, method-chained data transformations in **Pandas**, high-performance vectorized operations in **NumPy & SciPy**, and financial time-series modeling.
 
 ---
 
-## 🎯 Fokus Kompetensi & Target Pembelajaran
+## 🎯 Competency Focus & Learning Objectives
 
 1. **Idiomatic Pandas & Method Chaining:**
-   - Menghindari kode imperatif (mutasi *in-place*, `df['col'] = ...` berulang-ulang, atau `for-loop` lambat).
-   - Mengadopsi alur fungsional deklaratif menggunakan:
-     - `.assign()`: Pembuatan kolom turunan fungsional dengan fungsi `lambda`.
-     - `.pipe()`: Integrasi fungsi modular kustom ke dalam pipeline transformasi.
-     - `.query()`: Pemfilteran data deklaratif dan terbaca (*human-readable filtering*).
+   - Eradicating imperative anti-patterns (in-place mutations, repetitive `df['col'] = ...` assignments, and slow explicit `for-loops`).
+   - Adopting declarative, functional data transformation pipelines:
+     - `.assign()`: Functional generation of derived columns using scoped `lambda` expressions.
+     - `.pipe()`: Composable pipeline integration for custom analytical transformations.
+     - `.query()`: Human-readable, declarative filtering syntax.
 2. **Quantitative Time-Series Analysis:**
-   - Penanganan indeks temporal (`DatetimeIndex`), zona waktu, dan frekuensi perdagangan (*business day resampling*).
-   - Perhitungan metrik kuantitatif: *Logarithmic vs. Simple Returns*, *Rolling Volatility (Annualized)*, *Exponential Moving Average (EMA)*, *Drawdown*, dan *Value at Risk (VaR)* historis.
+   - Robust temporal indexing (`DatetimeIndex`), market holiday adjustments, and business-day frequency resampling.
+   - Core financial engineering calculations: *Logarithmic vs. Simple Returns*, *Rolling Annualized Volatility*, *Exponential Moving Averages (EMA)*, *Drawdown Dynamics*, and Historical *Value-at-Risk (VaR)*.
 3. **Statistical Inference & Hypothesis Testing:**
-   - Uji normalitas (Shapiro-Wilk, Jarque-Bera) pada distribusi return harga aset.
-   - Analisis korelasi dan regresi linear multivariat untuk mengestimasi koefisien Beta portofolio.
-4. **Pemisahan Eksperimentasi dan Produksi:**
-   - Menggunakan folder `notebooks/` murni untuk eksplorasi dan visualisasi awal.
-   - Merefaktor fungsi-fungsi analitik yang telah stabil ke dalam modul Python murni di folder `src/` agar dapat diuji (*unit tested*) dan digunakan kembali (*reusable*).
+   - Normality testing (Shapiro-Wilk, Jarque-Bera) across asset return distributions.
+   - Multivariate regression and correlation analysis to quantify asset factor loadings and portfolio Beta.
+4. **Decoupling Exploration from Production Code:**
+   - Restricting `notebooks/` strictly to exploratory data analysis (EDA) and experimental visualization.
+   - Refactoring battle-tested analytical functions into modular, importable Python packages in `src/` to support unit testing and pipeline integration.
 
 ---
 
-## 📂 Struktur Modul
+## 📂 Module Architecture
 
 ```text
 04_Python/
-├── README.md                   # Dokumen panduan modul (file ini)
-├── notebooks/                  # Jupyter notebooks untuk analisis eksploratif (EDA)
+├── README.md                   # Module documentation (this file)
+├── notebooks/                  # Jupyter notebooks for exploratory data analysis (EDA)
 │   ├── 01_functional_pandas_pipeline.ipynb
 │   ├── 02_financial_timeseries_analysis.ipynb
 │   └── 03_risk_metrics_and_volatility.ipynb
-└── src/                        # Modul Python fungsional (.py)
+└── src/                        # Modular Python source packages (.py)
     ├── __init__.py
-    ├── data_cleaning.py        # Fungsi pembersihan data pipeline (.pipe())
-    └── quant_metrics.py        # Perhitungan Sharpe ratio, drawdown, returns
+    ├── data_cleaning.py        # Functional data sanitization pipelines (.pipe())
+    └── quant_metrics.py        # Quantitative engines (Sharpe ratio, drawdown, returns)
 ```
 
 ---
 
-## ⚡ Filosofi Kode: Functional Data Pipeline Blueprint
+## ⚡ Code Philosophy: Functional Data Pipeline Blueprint
 
-Berikut adalah standar penulisan pipeline data fungsional yang diadopsi di seluruh modul ini:
+Below is the standard functional pipeline blueprint enforced across all analysis in this module:
 
 ```python
 import numpy as np
@@ -51,13 +51,13 @@ import pandas as pd
 
 
 def remove_outliers(df: pd.DataFrame, column: str, z_thresh: float = 3.0) -> pd.DataFrame:
-  """Membersihkan data pencilan berdasarkan z-score secara fungsional."""
+  """Purges distribution outliers based on absolute z-score without mutating state."""
   z_scores = np.abs((df[column] - df[column].mean()) / df[column].std())
   return df[z_scores < z_thresh]
 
 
 def calculate_quant_factors(df: pd.DataFrame) -> pd.DataFrame:
-  """Menghitung faktor kuantitatif return dan volatilitas bergulir."""
+  """Derives essential quantitative factor metrics: log returns and annualized rolling volatility."""
   return df.assign(
       log_return=lambda d: np.log(d['adj_close'] / d['adj_close'].shift(1)),
       rolling_vol_21d=lambda d: d['log_return'].rolling(21).std() * np.sqrt(252),
@@ -65,7 +65,7 @@ def calculate_quant_factors(df: pd.DataFrame) -> pd.DataFrame:
   )
 
 
-# Pipeline eksekusi fungsional:
+# Executable functional pipeline:
 processed_df = (
     pd.read_csv('data/market_raw.csv')
     .pipe(clean_column_names)
@@ -74,4 +74,3 @@ processed_df = (
     .dropna()
 )
 ```
-

@@ -49,11 +49,11 @@ share/python-wheels/
 *.db
 *.sql.dump
 
-# Keep directory structure for data folders via .gitkeep
+# Preserve directory structure via .gitkeep
 !**/data/.gitkeep
 !**/data/sample/*.csv
 
-# Power BI binaries (Power BI files can exceed GitHub limits; prefer PBIP format or external storage)
+# Power BI binaries (Large binary files; prefer PBIP format or external storage)
 *.pbix
 *.pbit
 
@@ -77,4 +77,3 @@ desktop.ini
 *.swp
 *.swo
 *~
-
