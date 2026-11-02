@@ -1,8 +1,6 @@
 # 📊 Data Analytics & Quantitative Foundations: Proof of Work (PoW)
 
 > **Learning in Public & Technical Execution Logbook**  
-> *Author:* Mahasiswa S1 Informatika (Peminatan Sains Data, Semester 5)  
-> *Target Roles:* Quantitative Finance Intern | Quantitative Research Analyst | Data Analyst  
 > *Environment:* Antigravity IDE | Python 3.11+ | PostgreSQL | Power BI | Microsoft Excel
 
 ---
