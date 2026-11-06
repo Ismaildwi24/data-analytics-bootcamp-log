@@ -31,7 +31,8 @@ Welcome to the **Advanced Analytical SQL** module. This repository section is de
 │   ├── 02_advanced_ctes.sql
 │   └── 03_query_optimization.sql
 └── case_studies/               # Real-world business cases and practice problem briefs
-    └── case_study_01_job_postings.md
+    ├── case_study_01_job_postings.md
+    └── case_study_02_comparisons.md
 ```
 
 ---
