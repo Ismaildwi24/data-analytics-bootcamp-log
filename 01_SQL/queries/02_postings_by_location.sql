@@ -1,0 +1,7 @@
+-- Problem Practice 2
+SELECT job_id, 
+	   job_title_short, 
+       job_location, 
+       job_via
+FROM job_postings_fact
+ORDER BY job_location ASC
